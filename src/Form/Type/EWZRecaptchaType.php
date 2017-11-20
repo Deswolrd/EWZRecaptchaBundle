@@ -80,7 +80,7 @@ class EWZRecaptchaType extends AbstractType
 
         if (!$this->ajax) {
             $view->vars = array_replace($view->vars, array(
-                'url_challenge' => sprintf('%s?hl=%s', self::RECAPTCHA_API_SERVER, $options['language']),
+                'url_challenge' => sprintf('%s&hl=%s', self::RECAPTCHA_API_SERVER, $options['language']),
                 'public_key' => $this->publicKey,
             ));
         } else {
